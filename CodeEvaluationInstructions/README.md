@@ -92,6 +92,7 @@ a.	the solution files are given the following filename structure:
 ‘solution_[Seer_Username]_pat[patient_index]_seg[segment_length_minutes]_mode[mode]_subtract[subtract_mean].csv’  
 
 where ‘Seer_Username’ is the username you used to access the Seer platform and other variables have been defined above.
+
 b.	the code separately reads in the train (mode=1), validation (mode=2) or test (mode=3) sets depending on the ‘mode’ and the validation and test segment filenames are provided in a similar fashion to the training set filenames. The csv file containing the list of **validation** set filenames will have the following filename structure:  
 
 ‘validation_filenames_patient[patient_index]_segment_length_[segment_length_minutes].csv’ 
@@ -102,6 +103,7 @@ and the csv file containing the list of **test** set filenames will have the fol
 
 These csv files should be stored in the folder path pointed to by ‘CSV’ in the “SETTINGS1.json” file. Similar to the case for training, in each row of each of these validation and test filename list csv files the first column called ‘image’ will contain the segment filename: 
 ‘[PATH]/UTC_AB_CD_EF.mat’
+
 c.	The solution files have a similar internal structure to the contest solution file provided at: http://www.epilepsyecosystem.org/s/contest_solution_file.csv 
 Where the first column is called ‘image’ and the second column is called ‘class’. In each row the first column should contain the filename of a segment: 
 ‘[PATH]/UTC_AB_CD_EF.mat’
