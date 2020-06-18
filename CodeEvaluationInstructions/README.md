@@ -75,11 +75,13 @@ a.	the solution files to be given the following filename structure:
 ‘contest_data_solution_[Seer_Username]_mode[mode].csv’  
 
 where ‘Seer_Username’ is the username you used to access the Seer platform and download the contest data and ‘mode’ has been defined above.
+
 b.	the code to separately read in the train (mode=1) or test (mode=3) sets depending on the ‘mode’ and for testing you code should read in the file
 https://www.epilepsyecosystem.org/s/contest_test_data_labels_public.csv 
 as input so that it knows which test files to read in. This csv file should be stored in the folder path pointed to by ‘CSV’ in the “SETTINGS1.json” file. Note, similar to the training data we will be using a modified version of this .csv file where in each row we include the ‘PATH’ on our supercomputer to the files so that in our file each row will look as follows: 
 ‘[PATH]/PatITest_J_0.mat’
 Again, you do not need to work with the modified .csv file, you only need to make sure your code reads in ‘contest_test_data_labels_public.csv’ so that it knows how to load in the files for testing. Note your code should process all patients in the contest data at once so a single solution file can be generated for all patients.
+
 c.	The solution file should have the same internal structure to the contest solution file provided at: http://www.epilepsyecosystem.org/s/contest_solution_file.csv 
 Where the first column is called ‘image’ and the second column is called ‘class’. In the second column you should provide the preictal probability for the file segment in the corresponding row. The probability should be a value between 0 and 1, 0 indicating interictal and 1 preictal. If you don’t want to provide a preictal probability for a row leave this empty or enter a ‘None’ or ‘NaN’.
 
