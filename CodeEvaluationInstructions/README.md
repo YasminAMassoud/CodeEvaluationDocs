@@ -11,7 +11,7 @@ Your **Python 3 (Anaconda)** code should:
 
 1. **have control 5 variables** called ‘run_on_contest_data’, ‘mode’, ‘patient_index’, ‘segment_length_minutes’, ‘subtract_mean’ and **four directory path string variables** called ‘model’, ‘feat’, ‘CSV’ and ‘solutions’ that are set by reading in the attached ![“SETTINGS.json”](SETTINGS.json) file, and described below. We can modify these variables in the ![“SETTINGS.json”](SETTINGS.json) file in order to run different jobs with your code. 
 
-2. **have the option to run the code on the contest data or the continuous long-term data** by specifying ‘run_on_contest_data’ to be 1 to run on the contest data or 0 to run on the continuous data. When running on the contest data (‘run_on_contest_data’=1) your code will read in the files you have been given previously when you first started working on the data and process all three contest data patients at the same time to generate the required solution file in the form given previously, and the only other control variable used will be ‘mode’. Providing this option will enable us to double check we are running your code correctly on our system. This means that ‘patient_index’, ‘segment_length_minutes’, and ‘subtract_mean’ in the “SETTINGS1.json” file should be ignored in this case. Only ‘mode’ will be used.
+2. **have the option to run the code on the contest data or the continuous long-term data** by specifying ‘run_on_contest_data’ to be 1 to run on the contest data or 0 to run on the continuous data. When running on the contest data (‘run_on_contest_data’=1) your code will read in the files you have been given previously when you first started working on the data and process all three contest data patients at the same time to generate the required solution file in the form given previously, and the only other control variable used will be ‘mode’. Providing this option will enable us to double check we are running your code correctly on our system. This means that ‘patient_index’, ‘segment_length_minutes’, and ‘subtract_mean’ in the ![“SETTINGS.json”](SETTINGS.json) file should be ignored in this case. Only ‘mode’ will be used.
 
 When running on the full continuous data (‘run_on_contest_data’=0) there is much more data and so individual patients will be processed separately and all control variables will be used: ‘mode’, ‘patient_index’, ‘segment_length_minutes’, ‘subtract_mean’.  
 
@@ -46,7 +46,7 @@ For the continuous data (‘run_on_contest_data’=0) the options will be:
 
 **If ‘run_on_contest_data’=1,** we want your code to load in the file  
 http://www.epilepsyecosystem.org/s/contest_train_data_labels.csv 
-as input and use it to read in the training files. This csv file should be stored in the folder path pointed to by ‘CSV’ in the “SETTINGS1.json” file. Note we will be using a modified version of this .csv file where in each row we include the ‘PATH’ on our supercomputer to the files so that in our file each row will look as follows: 
+as input and use it to read in the training files. This csv file should be stored in the folder path pointed to by ‘CSV’ in the ![“SETTINGS.json”](SETTINGS.json) file. Note we will be using a modified version of this .csv file where in each row we include the ‘PATH’ on our supercomputer to the files so that in our file each row will look as follows: 
 ‘[PATH]/PatITrain_J_K.mat’
 You do not need to work with the modified .csv file, you only need to make sure your code reads in ‘contest_train_data_labels.csv’ so that it knows how to load in the files for training. Note your code should process all patients in the contest data at once so a single solution file can be generated for all patients.  
 
@@ -56,7 +56,7 @@ However, the csv file containing the list of **training** set filenames will hav
 
 ‘train_filenames_labels_patient[patient_index]_segment_length_[segment_length_minutes].csv’ 
 
-where ‘patient_index’ and ‘segment_length_minutes’ are defined above. These csv files should be stored in the folder path pointed to by ‘CSV’ in the “SETTINGS1.json” file. 
+where ‘patient_index’ and ‘segment_length_minutes’ are defined above. These csv files should be stored in the folder path pointed to by ‘CSV’ in the ![“SETTINGS.json”](SETTINGS.json) file. 
 
 In each row of each ‘train_filenames_labels_patient[patient_index]_segment_length_[segment_length_minutes].csv’ file the first column called ‘image’ will contain the segment filename: 
 
@@ -66,7 +66,7 @@ where ‘PATH’ points to where we have stored the file and “AB_CD_EF” corr
 
 **Note:** This means you cannot get the class label from a training file segment’s filename like you can with the contest training data. The class label will be available in the second column of the ‘train_filenames_labels_patient[patient_index]_segment_length_[segment_length_minutes].csv’ files.
 
-11. **Generate solution files for the train, validation and test sets** where the solution files are to be stored in a folder pointed to by the variable ‘solutions’ in the “SETTINGS1.json” file. To avoid evaluation errors, the number of the rows and order of filenames listed in the solution files should precisely match the number of the rows and order of filenames provided in the corresponding lists of filenames for the train, validation or test sets that are used to read data segments into your code.
+11. **Generate solution files for the train, validation and test sets** where the solution files are to be stored in a folder pointed to by the variable ‘solutions’ in the ![“SETTINGS.json”](SETTINGS.json) file. To avoid evaluation errors, the number of the rows and order of filenames listed in the solution files should precisely match the number of the rows and order of filenames provided in the corresponding lists of filenames for the train, validation or test sets that are used to read data segments into your code.
 
 **If ‘run_on_contest_data’=1, we want**
 
@@ -78,7 +78,7 @@ where ‘Seer_Username’ is the username you used to access the Seer platform a
 
 b.	the code to separately read in the train (mode=1) or test (mode=3) sets depending on the ‘mode’ and for testing you code should read in the file
 https://www.epilepsyecosystem.org/s/contest_test_data_labels_public.csv 
-as input so that it knows which test files to read in. This csv file should be stored in the folder path pointed to by ‘CSV’ in the “SETTINGS1.json” file. Note, similar to the training data we will be using a modified version of this .csv file where in each row we include the ‘PATH’ on our supercomputer to the files so that in our file each row will look as follows: 
+as input so that it knows which test files to read in. This csv file should be stored in the folder path pointed to by ‘CSV’ in the ![“SETTINGS.json”](SETTINGS.json) file. Note, similar to the training data we will be using a modified version of this .csv file where in each row we include the ‘PATH’ on our supercomputer to the files so that in our file each row will look as follows: 
 ‘[PATH]/PatITest_J_0.mat’
 Again, you do not need to work with the modified .csv file, you only need to make sure your code reads in ‘contest_test_data_labels_public.csv’ so that it knows how to load in the files for testing. Note your code should process all patients in the contest data at once so a single solution file can be generated for all patients.
 
@@ -101,7 +101,7 @@ and the csv file containing the list of **test** set filenames will have the fol
 
 ‘test_filenames_patient[patient_index]_segment_length_[segment_length_minutes].csv’
 
-These csv files should be stored in the folder path pointed to by ‘CSV’ in the “SETTINGS1.json” file. Similar to the case for training, in each row of each of these validation and test filename list csv files the first column called ‘image’ will contain the segment filename: 
+These csv files should be stored in the folder path pointed to by ‘CSV’ in the ![“SETTINGS.json”](SETTINGS.json) file. Similar to the case for training, in each row of each of these validation and test filename list csv files the first column called ‘image’ will contain the segment filename: 
 ‘[PATH]/UTC_AB_CD_EF.mat’
 
 c.	The solution files have a similar internal structure to the contest solution file provided at: http://www.epilepsyecosystem.org/s/contest_solution_file.csv 
@@ -109,11 +109,11 @@ Where the first column is called ‘image’ and the second column is called ‘
 ‘[PATH]/UTC_AB_CD_EF.mat’
 And the second column should contain the preictal probability for the file segment in the corresponding row. The probability should be a value between 0 and 1, 0 indicating interictal and 1 preictal. If you don’t want to provide a preictal probability for a row leave this empty or enter a ‘None’ or ‘NaN’.
 
-12. **store the trained models in a folder** pointed to by the string variable ‘model’ defined in “SETTINGS1.json” and saved with the filenames: 
+12. **store the trained models in a folder** pointed to by the string variable ‘model’ defined in ![“SETTINGS.json”](SETTINGS.json) and saved with the filenames: 
 
 ‘model_dataset[run_on_contest_data]_pat[patient_index]_seg[segment_length_minutes]_subtract[subtract_mean]’
 
-13. **(if necessary) store intermediate features in a folder** path defined by the concatenation of the string variable ‘feat’ defined in “SETTINGS1.json” and sub-folders called: 
+13. **(if necessary) store intermediate features in a folder** path defined by the concatenation of the string variable ‘feat’ defined in ![“SETTINGS.json”](SETTINGS.json) and sub-folders called: 
 ‘feat_dataset[run_on_contest_data]_pat[patient_index]_seg[segment_length_minutes]_subtract[subtract_mean]’
 If is up to you if you store files directly in these sub-folders or in sub-folders within these sub-folders.
 
