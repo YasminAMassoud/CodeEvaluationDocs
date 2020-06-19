@@ -1,0 +1,23 @@
+{
+"_comment": "dataset"
+"run_on_contest_data’" : 1,
+"_comment": "mode"
+"mode": 1,
+"_comment": "patient_index",
+"pat": 3,
+"_comment": "choose lenght of segments"
+"segment_length_minutes" :10, 
+"_comment": "switch ON(1) or OFF(0) subtraction of the mean"
+"subtract_mean": 0 
+"_comment": "path to trained model location",
+"model": "./trains",
+"_comment": "path to generated features location",
+"feat": "./features"
+"_comment": "path to CSV files (containing the lists of data file names) location",
+"CSV": "./CSV"
+"_comment": "path to solution files location",
+"solutions": "./solutions" 
+
+}
+
+
