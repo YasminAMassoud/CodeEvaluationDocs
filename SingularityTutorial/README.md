@@ -148,43 +148,43 @@ Depends on which repository you want to build your .sif file, you should name th
 
 2.	Sign into the singularity Hub via https://singularity-hub.org/. 
 
-![](Images/2.png)
+![](images/2.png)
 
 Connect your GitHub into Singularity Hub by signing into the Singularity Hub. 
 
 3.	Go to the Singularity Hub and from collections, select My collections. 
 
-![](Images/3.png)
+![](images/3.png)
 
 
 4.	You can see list of your recipe files hosted on your GitHub in My Collections. 
 
-![](Images/4.png)
+![](images/4.png)
 
 5.	Go to “ADD A COLLECTION”, the red box in the above. You will see list of your GitHub repositories. 
 
-![](Images/5.png)
+![](images/5.png)
 
 6.	Select a NEW Container Build by dragging the grey button till it gets to blue as shown in below. 
 
-![](Images/6.png)
+![](images/6.png)
 
 Then, click SUBMIT button. If you use Bootstrap, you must set a proper Singularity version to be able to build your image automatically. 
 7.	Click on SETTINGS button as shown above and change your default cloud builder to singularity-builder-3-4-2. 
 
-![](Images/7.png)
+![](images/7.png)
 
 Save changes and then back to the previous page. 
 
-![](Images/8.png)
+![](images/8.png)
 
 8.	In this page you see a refresh icon next to the SETTINGS. You can reload the page or press this button and you will see that the builder is running to build your image. Wait till RUNNING change to COMPLETE. If not, reload the page. If it cannot successfully build your image you will see ERROR. Then you can debug it. It might take a while to build your image, depends on the size of your image. 
 
-![](Images/9.png) 
+![](images/9.png) 
 
 9.	When the image has been built you will see COMPLETE button as below. As you can see, you can download your image as well.
 
-![](Images/10.png)
+![](images/10.png)
 
 There are limitations on the number of attempts on building container on Singularity Hub, only 10 build per day is allowed. 
 
