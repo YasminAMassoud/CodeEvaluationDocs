@@ -56,7 +56,7 @@ However, the csv file containing the list of **training** set filenames will hav
 
 ‘train_filenames_labels_patient[patient_index]_segment_length_[segment_length_minutes].csv’ 
 
-where ‘patient_index’ and ‘segment_length_minutes’ are defined above. These csv files should be stored in the folder path pointed to by ‘CSV’ in the ![“SETTINGS.json”](SETTINGS.json) file. 
+where ‘patient_index’ and ‘segment_length_minutes’ are defined above. These csv files !["CSVfiles"](CSVfiles) should be stored in the folder path pointed to by ‘CSV’ in the ![“SETTINGS.json”](SETTINGS.json) file. 
 
 In each row of each ‘train_filenames_labels_patient[patient_index]_segment_length_[segment_length_minutes].csv’ file the first column called ‘image’ will contain the segment filename: 
 
