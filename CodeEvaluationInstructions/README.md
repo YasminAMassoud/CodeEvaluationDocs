@@ -54,7 +54,7 @@ You do not need to work with the modified .csv file, you only need to make sure 
 http://www.epilepsyecosystem.org/s/contest_train_data_labels.csv
 However, the csv file containing the list of **training** set filenames will have the following filename structure: 
 
-‘train_filenames_labels_patient[patient_index]_segment_length_[segment_length_minutes].csv’ as you can find it ![https://github.com/epilepsyecosystem/CodeEvaluationDocs/tree/master/CodeEvaluationInstructions/CSVfiles](here)
+‘train_filenames_labels_patient[patient_index]_segment_length_[segment_length_minutes].csv’ as you can find it !["here"](CSVfiles)
 
 where ‘patient_index’ and ‘segment_length_minutes’ are defined above. These csv files !["CSVfiles"](CSVfiles) should be stored in the folder path pointed to by ‘CSV’ in the ![“SETTINGS.json”](SETTINGS.json) file. 
 
