@@ -50,8 +50,8 @@ as input and use it to read in the training files. This csv file should be store
 ‘[PATH]/PatITrain_J_K.mat’
 You do not need to work with the modified .csv file, you only need to make sure your code reads in ‘contest_train_data_labels.csv’ so that it knows how to load in the files for training. Note your code should process all patients in the contest data at once so a single solution file can be generated for all patients.  
 
-**If ‘run_on_contest_data’=0,** we want your code to be able to train on a set of file segments of length ‘segment_length_minutes’ for each patient specified by a list of filenames using the same list structure as in: 
-http://www.epilepsyecosystem.org/s/contest_train_data_labels.csv
+**If ‘run_on_contest_data’=0,** we want your code to be able to train on a set of file segments of length ‘segment_length_minutes’ for each patient specified by a list of filenames using the similar list structure as given in the contest data. 
+
 However, the csv file containing the list of **training** set filenames will have the following filename structure: 
 
 ‘train_filenames_labels_patient[patient_index]_segment_length_[segment_length_minutes].csv’ as you can find them !["here"](CSVfiles)
