@@ -58,7 +58,7 @@ where ‘patient_index’ and ‘segment_length_minutes’ are defined above. Th
 
 In each row of each ‘train_filenames_labels_patient[patient_index]_segment_length_[segment_length_minutes].csv’ file the first column called ‘image’ will contain the segment filename: 
 
-‘[PATH]/UTC_AB_CD_EF.mat’ (examples of .mat files are available !["here"](CSVfiles/matfiles) and used in CSVfiles)
+‘[PATH]/UTC_AB_CD_EF.mat’ (as you can find here examples of .mat files for testing your code !["here"](CSVfiles/matfiles) which have been used in CSVfiles)
 
 where ‘PATH’ points to where we have stored the file and “AB_CD_EF” corresponds to the hours, minutes and seconds of the start of the segment relative to the start of the recording in UTC time. Moreover, the second column called ‘class’ will contain the class label: 0 for interictal, 1 for preictal.
 
