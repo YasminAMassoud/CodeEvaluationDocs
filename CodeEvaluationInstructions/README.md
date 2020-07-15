@@ -52,11 +52,11 @@ You do not need to work with the modified .csv file, you only need to make sure 
 
 **If ‘run_on_contest_data’=0,** we want your code to be able to train on a set of file segments of length ‘segment_length_minutes’ for each patient specified by a list of filenames using the similar list structure as given in the contest data. However, the csv file containing the list of **training** set filenames will have the following filename structure: 
 
-‘train_filenames_labels_patient[patient_index]_segment_length_[segment_length_minutes].csv’ as you can find them !["here"](CSVfiles)
+‘train_filenames_labels_patient[patient_index] _segment_length_ [segment_length_minutes].csv’ as you can find them !["here"](CSVfiles)
 
 where ‘patient_index’ and ‘segment_length_minutes’ are defined above. These csv files !["CSVfiles"](CSVfiles) should be stored in the folder path pointed to by ‘CSV’ in the ![“SETTINGS.json”](SETTINGS.json) file. 
 
-In each row of each ‘train_filenames_labels_patient[patient_index]_segment_length_[segment_length_minutes].csv’ file the first column called ‘image’ will contain the segment filename: 
+In each row of each ‘train_filenames_labels_patient[patient_index]_segment_length_ [segment_length_minutes].csv’ file the first column called ‘image’ will contain the segment filename: 
 
 ‘[PATH]/UTC_AB_CD_EF.mat’ (as you can find here examples of .mat files for testing your code !["here"](CSVfiles/matfiles) which have been used in CSVfiles)
 
