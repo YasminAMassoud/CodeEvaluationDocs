@@ -28,7 +28,7 @@ For the continuous data (‘run_on_contest_data’=0) the options will be:
      
 4. **be able to read the data in as .mat Matlab files.** See items 10/11 below for data filename information.
 
-5. **be efficient such that the time taken to classify a 10 minute data segment is at most 30 seconds on a single thread.** This duration needs to include all feature calculation and classification steps of a pretrained algorithm. You are allowed to use GPUs for training (when mode=1) if needed but then your code needs to switch to single thread for the validation and test modes (mode=2 or 3). We will use the ‘sacct’ command on our Slurm job queue system to determine the total run time for your job and divide by the total number of files processed to obtain estimates of time taken to classify. 
+5. **be efficient such that the time taken to classify a 10 minute data segment is at most 30 seconds.** This duration needs to include all feature calculation and classification steps of a pretrained algorithm. [[[[You are allowed to use GPUs for training (when mode=1) if needed but then your code needs to switch to single thread for the validation and test modes (mode=2 or 3).]]]] We will use the ‘sacct’ command on our Slurm job queue system to determine the total run time for your job and divide by the total number of files processed to obtain estimates of time taken to classify. 
 
 6. **utilise at most 100 MB of RAM when classifying a 10 minute data segment.** We need to know the max RAM used during each mode (mode = 1, 2 or 3). We will use the ‘sacct’ command on our Slurm job queue system to determine the max RAM usage during your jobs.
 
