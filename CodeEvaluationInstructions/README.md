@@ -36,7 +36,7 @@ For the continuous data (‘run_on_contest_data’=0) the options will be:
 
 7. **if ‘run_on_contest_data’=0, train, validate or test on one patient at a time** and should include the control variable called ‘patient_index’ we can modify that selects the index of the patient to be analysed. The patient indices range from 1 to 15.
 
-8. **if ‘run_on_contest_data’=0, be able to read in file segments of different sizes** by changing the control variable called ‘segment_length_minutes’ which takes on values of 1 or 10 minutes. You should set the default to 10 minutes to be consistent with the contest data. We will explore the effect of 1 vs 10 minute window sizes on only the best algorithm for each patient as determined from the validation set.
+<!---8. **if ‘run_on_contest_data’=0, be able to read in file segments of different sizes** by changing the control variable called ‘segment_length_minutes’ which takes on values of 1 or 10 minutes. You should set the default to 10 minutes to be consistent with the contest data. We will explore the effect of 1 vs 10 minute window sizes on only the best algorithm for each patient as determined from the validation set.--->
 
 9. **if ‘run_on_contest_data’=0, be able to switch ON or OFF subtraction of the mean from each channel within each data segment** by changing the control variable called ‘subtract_mean’ which takes on values 0 (OFF) or 1 (ON). To avoid reverse engineering the contest data during the Kaggle contest, the contest data had the mean of each channel within a file segment subtracted from each corresponding channel. This is not the case with the original continuous data. We want to see what effect subtracting the mean will have on the continuous data so want to be able to switch it ON or OFF.
 
