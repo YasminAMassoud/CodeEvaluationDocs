@@ -51,7 +51,7 @@ For the continuous data (‘run_on_contest_data’=0) the options will be:
 
 **The remaining items refer to both the contest data (‘run_on_contest_data’=1) and continuous data (‘run_on_contest_data’=0) cases**
 
-10. **be able to train on a set of file segments.**
+9. **be able to train on a set of file segments.**
 
 **If ‘run_on_contest_data’=1,** we want your code to load in the file  
 http://www.epilepsyecosystem.org/s/contest_train_data_labels.csv 
@@ -59,7 +59,9 @@ as input and use it to read in the training files. This csv file should be store
 ‘[PATH]/PatITrain_J_K.mat’
 You do not need to work with the modified .csv file, you only need to make sure your code reads in ‘contest_train_data_labels.csv’ so that it knows how to load in the files for training. Note your code should process all patients in the contest data at once so a single solution file can be generated for all patients.  
 
-**If ‘run_on_contest_data’=0,** we want your code to be able to train on a set of file segments of length ‘segment_length_minutes’ for each patient specified by a list of filenames using the similar list structure as given in the contest data. However, the csv file containing the list of **training** set filenames will have the following filename structure: 
+<!---**If ‘run_on_contest_data’=0,** we want your code to be able to train on a set of file segments of length ‘segment_length_minutes’ for each patient specified by a list of filenames using the similar list structure as given in the contest data. However, the csv file containing the list of **training** set filenames will have the following filename structure:---> 
+
+**If ‘run_on_contest_data’=0,** we want your code to be able to train on a set of file segments of length 10 minute for each patient specified by a list of filenames using the similar list structure as given in the contest data. However, the csv file containing the list of **training** set filenames will have the following filename structure: 
 
 <!---‘train_filenames_labels_patient[patient_index] _segment_length_ [segment_length_minutes].csv’ as you can find them !["here"](CSVfiles)--->
 
@@ -81,7 +83,7 @@ where ‘PATH’ points to where we have stored the file and “AB_CD_EF” corr
 
 **Note:** This means you cannot get the class label from a training file segment’s filename like you can with the contest training data. The class label will be available in the second column of the ‘train_filenames_labels_patient[patient_index].csv’ files availabe !["here"](CSVfiles).
 
-11. **Generate solution files for the train, validation and test sets** where the solution files are to be stored in a folder pointed to by the variable ‘solutions’ in the ![“SETTINGS.json”](SETTINGS.json) file. To avoid evaluation errors, the number of the rows and order of filenames listed in the solution files should precisely match the number of the rows and order of filenames provided in the corresponding lists of filenames for the train, validation or test sets that are used to read data segments into your code.
+10. **Generate solution files for the train, validation and test sets** where the solution files are to be stored in a folder pointed to by the variable ‘solutions’ in the ![“SETTINGS.json”](SETTINGS.json) file. To avoid evaluation errors, the number of the rows and order of filenames listed in the solution files should precisely match the number of the rows and order of filenames provided in the corresponding lists of filenames for the train, validation or test sets that are used to read data segments into your code.
 
 **If ‘run_on_contest_data’=1, we want**
 
@@ -134,13 +136,13 @@ Where the first column is called ‘image’ and the second column is called ‘
 ‘[PATH]/UTC_AB_CD_EF.mat’
 And the second column should contain the preictal probability for the file segment in the corresponding row. The probability should be a value between 0 and 1, 0 indicating interictal and 1 preictal. If you don’t want to provide a preictal probability for a row leave this empty or enter a ‘None’ or ‘NaN’.
 
-12. **store the trained models in a folder** pointed to by the string variable ‘model’ defined in ![“SETTINGS.json”](SETTINGS.json) and saved with the filenames: 
+11. **store the trained models in a folder** pointed to by the string variable ‘model’ defined in ![“SETTINGS.json”](SETTINGS.json) and saved with the filenames: 
 
 <!---‘model_dataset[run_on_contest_data]_pat[patient_index]_seg[segment_length_minutes]_subtract[subtract_mean]’--->
 
 ‘model_dataset[run_on_contest_data]_pat[patient_index]_subtract[subtract_mean]’
 
-13. **(if necessary) store intermediate features in a folder** path defined by the concatenation of the string variable ‘feat’ defined in ![“SETTINGS.json”](SETTINGS.json) and sub-folders called: 
+12. **(if necessary) store intermediate features in a folder** path defined by the concatenation of the string variable ‘feat’ defined in ![“SETTINGS.json”](SETTINGS.json) and sub-folders called: 
 <!---‘feat_dataset[run_on_contest_data]_pat[patient_index]_seg[segment_length_minutes]_subtract[subtract_mean]’--->
 
 ‘feat_dataset[run_on_contest_data]_pat[patient_index]_subtract[subtract_mean]’
