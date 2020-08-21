@@ -34,7 +34,7 @@ For the continuous data (‘run_on_contest_data’=0) the options will be:
      
 4. **be able to read the data in as .mat Matlab files of version 5.0.** See items 10/11 below for data filename information.
 
-Notice: A 10 min segment of the **continuous** data set is of shape (239770,16) and in the **contest** data it is (240000,16), where actual sampling rate is around 399.6098 for each patient.
+**Note**: A 10 min segment of the **continuous** data set is of shape (239770,16) and in the **contest** data it is (240000,16), where actual sampling rate is around 399.6098 for each patient.
 
 
 <!---5. **be efficient such that the time taken to classify a 10 minute data segment is at most 30 seconds.** This duration needs to include all feature calculation and classification steps of a pretrained algorithm. [[[[You are allowed to use GPUs for training (when mode=1) if needed but then your code needs to switch to single thread for the validation and test modes (mode=2 or 3).]]]] We will use the ‘sacct’ command on our Slurm job queue system to determine the total run time for your job and divide by the total number of files processed to obtain estimates of time taken to classify.--->
