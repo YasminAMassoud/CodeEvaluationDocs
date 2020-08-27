@@ -15,8 +15,8 @@ settings = json.load(open('SETTINGS.json'))
 pat = settings['pat']
 data = pd.read_csv(settings['feat']+'/pat_'+str(pat)+'_short_train.csv')
 test = pd.read_csv(settings['feat']+'/pat_'+str(pat)+'_short_test.csv')
-data2 = pd.read_csv(settings['feat']+'/pat_'+str(pat)+'_long_train.csv')
-test2 = pd.read_csv(settings['feat']+'/pat_'+str(pat)+'_long_test.csv')
+#data2 = pd.read_csv(settings['feat']+'/pat_'+str(pat)+'_long_train.csv')
+#test2 = pd.read_csv(settings['feat']+'/pat_'+str(pat)+'_long_test.csv')
 
 data = pd.concat([data,data2], axis=1)
 test = pd.concat([test,test2], axis=1)
