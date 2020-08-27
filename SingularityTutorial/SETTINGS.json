@@ -1,21 +1,13 @@
 
 {
-"_comment": "patient number",
+"run_on_contest_data’" : 1,
+"mode": 1,
 "pat": 3,
-"_comment": "make test features?",
-"make_test": 0,
-"_comment": "path to test data location",
-"test": "/",
-"_comment": "make train features?",
-"make_train": 1,
-"_comment": "path to train data location",
-"train": "/",
-"_comment": "make a hold-out feature set?",
-"make_hold": 0,
-"_comment": "path to hold-out data location",
-"hold-out": "/",
-"_comment": "path to trained model location",
-"model": "./",
-"_comment": "path to generated features location",
-"feat": "./" 
+"segment_length_minutes" :10, 
+"subtract_mean": 0 
+"model": "./trains",
+"feat": "./features"
+"CSV": "./CSV"
+"solutions": "./solutions" 
+
 }
