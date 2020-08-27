@@ -4,10 +4,10 @@
 "mode": 1,
 "pat": 3,
 "segment_length_minutes" :10, 
-"subtract_mean": 0 
+"subtract_mean": 0, 
 "model": "./trains",
-"feat": "./features"
-"CSV": "./CSV"
+"feat": "./features",
+"CSV": "./CSV",
 "solutions": "./solutions" 
 
 }
