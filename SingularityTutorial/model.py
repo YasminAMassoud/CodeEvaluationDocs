@@ -12,9 +12,24 @@ import pickle
 import json
 print('yes')
 settings = json.load(open('SETTINGS.json'))
+
+
+if mode <= 1: # train & feature_generation
+   segment_file_name_lables='/CSVs/train_filenames_labels_patient['+str(patient_index)+']_segment_length_['+str(segment_length_minutes)+'].csv'
+if mode == 2: # valid
+   segment_file_name_lables='/CSVs/validation+_filenames_patient['+str(patient_index)+']_segment_length_['+str(segment_length_minutes)+'].csv'
+if mode == 3: # test
+   segment_file_name_lables='/CSVs/test_filenames_patient['+str(patient_index)+']_segment_length_['+str(segment_length_minutes)+'].csv'
+
+df = pd.read_csv(segment_file_name_lables)
+
 pat = settings['pat']
-data = pd.read_csv(settings['feat']+'/pat_'+str(pat)+'_short_train.csv')
+
+data = pd.read_csv(settings['CSV']+'/train_filenames_labels_patient['+str(pat)+']_segment_length_['+str(segment_length_minutes)+'].csv')
 test = pd.read_csv(settings['feat']+'/pat_'+str(pat)+'_short_test.csv')
+
+#data = pd.read_csv(settings['feat']+'/pat_'+str(pat)+'_short_train.csv')
+#test = pd.read_csv(settings['feat']+'/pat_'+str(pat)+'_short_test.csv')
 #data2 = pd.read_csv(settings['feat']+'/pat_'+str(pat)+'_long_train.csv')
 #test2 = pd.read_csv(settings['feat']+'/pat_'+str(pat)+'_long_test.csv')
 
