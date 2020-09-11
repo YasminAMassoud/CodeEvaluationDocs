@@ -78,3 +78,15 @@ print("AUC: " + str(this_AUC))
 
 #pickle.dump(clf, open(settings['model']+'/modeldump_'+str(pat)+'_ef.pkl', 'wb'))
 
+solution_fname='solutions/solution_['+Seer_Username+']_pat['+str(patient_index)+']_seg['+str(segment_length_minutes)+']_mode['+str(mode)+']_subtract['+str(subtract_mean)+'].csv'
+
+solutions = pd.DataFrame({'image': df['image'], 'class': y_pred_prob[:,1]})
+solutions = solutions[['image','class']]
+
+solutions.to_csv(settings['solutions'] + solution_fname,index=0)
+
+
+
+
+
+
