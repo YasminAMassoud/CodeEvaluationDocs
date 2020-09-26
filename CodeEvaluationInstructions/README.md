@@ -98,7 +98,7 @@ a.	the solution files to be given the following filename structure:
 
 where ‘Seer_Username’ is the username you used to access the Seer platform and download the contest data and ‘mode’ has been defined above.
 
-b.	the code to separately read in the train (mode=1) or test (mode=3) sets depending on the ‘mode’ and for testing you code should read in the file
+b.	the code to separately read in the train (mode=1) or test (mode=3) sets depending on the ‘mode’ and for testing your code should read in the file
 https://www.epilepsyecosystem.org/s/contest_test_data_labels_public.csv 
 as input so that it knows which test files to read in. This csv file should be stored in the folder path pointed to by ‘CSV’ in the ![“SETTINGS.json”](SETTINGS.json) file. Note, similar to the training data we will be using a modified version of this .csv file where in each row we include the ‘PATH’ on our supercomputer to the files so that in our file each row will look as follows: 
 
@@ -152,7 +152,7 @@ And the second column should contain the preictal probability for the file segme
 
 ‘feat_dataset[run_on_contest_data]_pat[patient_index]_subtract[subtract_mean]’
 
-If is up to you if you store files directly in these sub-folders or in sub-folders within these sub-folders.
+It is up to you if you store files directly in these sub-folders or in sub-folders within these sub-folders.
 
 **Additional note:** we will provide you with sample versions of the required files for testing your code.
 
