@@ -59,7 +59,7 @@ For the continuous data (‘run_on_contest_data’=0) the options will be:
 9. **be able to train on a set of file segments.**
 
 **If ‘run_on_contest_data’=1,** we want your code to load in the file  
-http://www.epilepsyecosystem.org/s/contest_train_data_labels.csv 
+http://www.epilepsyecosystem.org/s/contest_train_data_labels.csv as you can find it here!["here"](CSV)
 as input and use it to read in the training files. This csv file should be stored in the folder path pointed to by ‘CSV’ in the ![“SETTINGS.json”](SETTINGS.json) file. Note we will be using a modified version of this .csv file where in each row we include the ‘PATH’ on our supercomputer to the files so that in our file each row will look as follows: 
 ‘[PATH]/PatITrain_J_K.mat’
 You do not need to work with the modified .csv file, you only need to make sure your code reads in ‘contest_train_data_labels.csv’ so that it knows how to load in the files for training. Note your code should process all patients in the contest data at once so a single solution file can be generated for all patients.  
@@ -74,13 +74,13 @@ You do not need to work with the modified .csv file, you only need to make sure 
 
 <!---where ‘patient_index’ and ‘segment_length_minutes’ are defined above. These csv files !["CSVfiles"](CSVfiles) should be stored in the folder path pointed to by ‘CSV’ in the ![“SETTINGS.json”](SETTINGS.json) file.--->
 
-where ‘patient_index’ is defined above. These csv files !["CSVfiles"](CSVfiles) should be stored in the folder path pointed to by ‘CSV’ in the ![“SETTINGS.json”](SETTINGS.json) file. 
+where ‘patient_index’ is defined above. These csv files !["CSV"](CSV) should be stored in the folder path pointed to by ‘CSV’ in the ![“SETTINGS.json”](SETTINGS.json) file. 
 
 <!---In each row of each ‘train_filenames_labels_patient[patient_index]_segment_length_ [segment_length_minutes].csv’ file the first column called ‘image’ will contain the segment filename:--->
 
 In each row of each ‘train_filenames_labels_patient[patient_index]_segment_length_10.csv’ file the first column called ‘image’ will contain the segment filename: 
 
-‘[PATH]/UTC_AB_CD_EF.mat’ (as you can find here examples of .mat files for testing your code !["here"](CSV/matfiles) which have been used in CSVfiles)
+‘[PATH]/UTC_AB_CD_EF.mat’ (as you can find here examples of .mat files for testing your code !["here"](CSV/matfiles) which have been used in CSV)
 
 where ‘PATH’ points to where we have stored the file and “AB_CD_EF” corresponds to the hours, minutes and seconds of the start of the segment relative to the start of the recording in UTC time. Moreover, the second column called ‘class’ will contain the class label: 0 for interictal, 1 for preictal.
 
@@ -99,7 +99,7 @@ a.	the solution files to be given the following filename structure:
 where ‘Seer_Username’ is the username you used to access the Seer platform and download the contest data and ‘mode’ has been defined above.
 
 b.	the code to separately read in the train (mode=1) or test (mode=3) sets depending on the ‘mode’ and for testing your code should read in the file
-https://www.epilepsyecosystem.org/s/contest_test_data_labels_public.csv 
+https://www.epilepsyecosystem.org/s/contest_test_data_labels_public.csv (find it here ["here"](CSV))
 as input so that it knows which test files to read in. This csv file should be stored in the folder path pointed to by ‘CSV’ in the ![“SETTINGS.json”](SETTINGS.json) file. Note, similar to the training data we will be using a modified version of this .csv file where in each row we include the ‘PATH’ on our supercomputer to the files so that in our file each row will look as follows: 
 
 ‘[PATH]/PatITest_J_0.mat’
