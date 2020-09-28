@@ -70,7 +70,7 @@ You do not need to work with the modified .csv file, you only need to make sure 
 
 <!---‘train_filenames_labels_patient[patient_index] _segment_length_ [segment_length_minutes].csv’ as you can find them !["here"](CSVfiles)--->
 
-‘train_filenames_labels_patient[patient_index]_segment_length_10.csv’ as you can find them !["here"](CSVfiles)
+‘train_filenames_labels_patient[patient_index]_segment_length_10.csv’ as you can find them !["here"](CSV)
 
 <!---where ‘patient_index’ and ‘segment_length_minutes’ are defined above. These csv files !["CSVfiles"](CSVfiles) should be stored in the folder path pointed to by ‘CSV’ in the ![“SETTINGS.json”](SETTINGS.json) file.--->
 
@@ -80,13 +80,13 @@ where ‘patient_index’ is defined above. These csv files !["CSVfiles"](CSVfil
 
 In each row of each ‘train_filenames_labels_patient[patient_index]_segment_length_10.csv’ file the first column called ‘image’ will contain the segment filename: 
 
-‘[PATH]/UTC_AB_CD_EF.mat’ (as you can find here examples of .mat files for testing your code !["here"](CSVfiles/matfiles) which have been used in CSVfiles)
+‘[PATH]/UTC_AB_CD_EF.mat’ (as you can find here examples of .mat files for testing your code !["here"](CSV/matfiles) which have been used in CSVfiles)
 
 where ‘PATH’ points to where we have stored the file and “AB_CD_EF” corresponds to the hours, minutes and seconds of the start of the segment relative to the start of the recording in UTC time. Moreover, the second column called ‘class’ will contain the class label: 0 for interictal, 1 for preictal.
 
 <!---**Note:** This means you cannot get the class label from a training file segment’s filename like you can with the contest training data. The class label will be available in the second column of the ‘train_filenames_labels_patient[patient_index]_segment_length_[segment_length_minutes].csv’ files availabe !["here"](CSVfiles).--->
 
-**Note:** This means you cannot get the class label from a training file segment’s filename like you can with the contest training data. The class label will be available in the second column of the ‘train_filenames_labels_patient[patient_index]_segment_length_10.csv’ files availabe !["here"](CSVfiles).
+**Note:** This means you cannot get the class label from a training file segment’s filename like you can with the contest training data. The class label will be available in the second column of the ‘train_filenames_labels_patient[patient_index]_segment_length_10.csv’ files availabe !["here"](CSV).
 
 10. **Generate solution files for the train, validation and test sets** where the solution files are to be stored in a folder pointed to by the variable ‘solutions’ in the ![“SETTINGS.json”](SETTINGS.json) file. To avoid evaluation errors, the number of the rows and order of filenames listed in the solution files should precisely match the number of the rows and order of filenames provided in the corresponding lists of filenames for the train, validation or test sets that are used to read data segments into your code.
 
@@ -125,13 +125,13 @@ b. the code separately reads in the train (mode=1), validation (mode=2) or test 
 
 <!---‘validation_filenames_patient[patient_index]_segment_length_[segment_length_minutes].csv’ availabe !["here"](CSVfiles)--->
 
-‘validation_filenames_patient[patient_index]_segment_length_10.csv’ availabe !["here"](CSVfiles)
+‘validation_filenames_patient[patient_index]_segment_length_10.csv’ availabe !["here"](CSV)
 
 and the csv file containing the list of **test** set filenames will have the following filename structure: 
 
 <!---‘test_filenames_patient[patient_index]_segment_length_[segment_length_minutes].csv’ availabe !["here"](CSVfiles)--->
 
-‘test_filenames_patient[patient_index]_segment_length_10.csv’ availabe !["here"](CSVfiles)
+‘test_filenames_patient[patient_index]_segment_length_10.csv’ availabe !["here"](CSV)
 
 These csv files should be stored in the folder path pointed to by ‘CSV’ in the ![“SETTINGS.json”](SETTINGS.json) file. Similar to the case for training, in each row of each of these validation and test filename list csv files the first column called ‘image’ will contain the segment filename: 
 ‘[PATH]/UTC_AB_CD_EF.mat’
