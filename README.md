@@ -17,3 +17,6 @@ for convenient independent evaluation on both the contest data and on the full t
 In this folder, a tutorial on how to make your code reproducible using Singularity container alnog with a running example is given. 
 
 
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=RvpdwQ2aPog&t=853s)
+
+
